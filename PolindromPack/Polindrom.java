@@ -7,7 +7,7 @@ public class Polindrom {
     static int HALF_NUM = (int) Math.pow(2, 15);
     public static void main(String[] args) {
         findNegPolindrom();
-        System.out.println("1");
+        System.out.println(One);
         findPosPolindrom();
         System.out.println(Count);
     }
@@ -21,9 +21,9 @@ public class Polindrom {
 
     private static void findNegPolindrom() {
         char[] negativePolindromes = new char[16];
-        negativePolindromes[0] = '1';
+        negativePolindromes[0] = One;
         for (int j = 1; j < 16; j++) {
-            negativePolindromes[j] = '0';
+            negativePolindromes[j] = Zero;
         }
         String bitNegativeNumber;
         String half;
@@ -85,8 +85,8 @@ public class Polindrom {
     public static void toStrNum(String str) {
         String reversedStr = new StringBuilder(str).reverse().toString();
         System.out.println(Integer.parseInt(reversedStr + str, 2));
-        System.out.println(Integer.parseInt(reversedStr + "0" + str, 2));
-        System.out.println(Integer.parseInt(reversedStr + "1" + str, 2));
+        System.out.println(Integer.parseInt(reversedStr + Zero + str, 2));
+        System.out.println(Integer.parseInt(reversedStr + One + str, 2));
         Count = Count + 3;
     }
 
